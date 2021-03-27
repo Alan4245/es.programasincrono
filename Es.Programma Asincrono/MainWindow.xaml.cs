@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Threading;
+using System.IO;
 
 namespace Es.Programma_Asincrono
 {
@@ -37,6 +38,8 @@ namespace Es.Programma_Asincrono
         Random r;
         int i;
         int f;
+        int totalCharacters;
+        int progressoProgressBar;
 
         public MainWindow()
         {
@@ -57,7 +60,12 @@ namespace Es.Programma_Asincrono
             r = new Random();
             i = 0;
             f = 0;
+            totalCharacters = 0;
+            progressoProgressBar = 0;
+            pgb1.Minimum = 0;
+            pgb1.Maximum = 500;
             SorteggioInfinito();
+            
         }
 
         public async void SorteggioInfinito()
@@ -165,7 +173,21 @@ namespace Es.Programma_Asincrono
             });
         }
 
-        private void btnEstrai_Click(object sender, RoutedEventArgs e)
+        public async void LetturaFile()
+        {
+            await Task.Run(() =>
+            {
+
+                using(StreamReader sr = new StreamReader("Data.txt"))
+                {
+                    string textFile = sr.ReadToEnd();
+                    totalCharacters = textFile.Length;
+                }
+
+            });
+        }
+
+    private void btnEstrai_Click(object sender, RoutedEventArgs e)
         {
 
             MessageBox.Show("Il risultato è: " + (i + f));
