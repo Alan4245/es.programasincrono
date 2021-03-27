@@ -191,12 +191,31 @@ namespace Es.Programma_Asincrono
         {
             await Task.Run(() =>
             {
-
+                int lel = 0;
+                double risStampa = 0;
                 while (progressoProgressBar < 500)
                 {
+                    Thread.Sleep(1000);
+                    lel += r.Next(0, 25);
 
+                    this.Dispatcher.BeginInvoke(new Action(() =>
+                    {
+                        if (lel < 500)
+                        {
+                            progressoProgressBar = lel;
+                            pgb1.Value = lel;
+                            risStampa = (lel * 100) / 500;
+                            lblOutputCaricamento.Content = ("In lettura: " + risStampa);
+                        }
+                        else
+                        {
+                            progressoProgressBar = 500;
+                            pgb1.Value = 500;
+                            lblOutputCaratteri.Content = ("I caratteri totali sono: " + totalCharacters);
+                            lblOutputCaricamento.Content = "Lettura completata";
+                        }
+                    }));
                 }
-
             });
         }
 

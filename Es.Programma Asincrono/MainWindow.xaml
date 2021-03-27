@@ -11,6 +11,8 @@
         <Image x:Name="imgDado1" HorizontalAlignment="Left" Height="80" Margin="50,310,0,0" VerticalAlignment="Top" Width="80"/>
         <Image x:Name="imgDado2" HorizontalAlignment="Left" Height="80" Margin="320,310,0,0" VerticalAlignment="Top" Width="80"/>
         <Button x:Name="btnEstrai" Content="ESTRAI" HorizontalAlignment="Left" Height="40" Margin="160,330,0,0" VerticalAlignment="Top" Width="130" Click="btnEstrai_Click"/>
+        <Label x:Name="lblOutputCaratteri" Content="" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Height="40" Margin="225,130,0,0" VerticalAlignment="Top" Width="360" FontStyle="Italic"/>
+        <Label x:Name="lblOutputCaricamento" Content="" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Height="45" Margin="205,65,0,0" VerticalAlignment="Top" Width="400" FontSize="20" FontWeight="Bold"/>
 
     </Grid>
 </Window>
