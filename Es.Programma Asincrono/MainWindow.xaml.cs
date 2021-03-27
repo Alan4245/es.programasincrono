@@ -58,7 +58,6 @@ namespace Es.Programma_Asincrono
             i = 0;
             f = 0;
             SorteggioInfinito();
-
         }
 
         public async void SorteggioInfinito()
@@ -163,7 +162,6 @@ namespace Es.Programma_Asincrono
                             break;
                     }
                 }
-
             });
         }
 
