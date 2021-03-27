@@ -10,7 +10,7 @@
         <ProgressBar x:Name="pgb1" HorizontalAlignment="Left" Height="40" Margin="60,20,0,0" VerticalAlignment="Top" Width="680"/>
         <Image x:Name="imgDado1" HorizontalAlignment="Left" Height="80" Margin="50,310,0,0" VerticalAlignment="Top" Width="80"/>
         <Image x:Name="imgDado2" HorizontalAlignment="Left" Height="80" Margin="320,310,0,0" VerticalAlignment="Top" Width="80"/>
-        <Button x:Name="btnEstrai" Content="ESTRAI" HorizontalAlignment="Left" Height="40" Margin="160,330,0,0" VerticalAlignment="Top" Width="130"/>
+        <Button x:Name="btnEstrai" Content="ESTRAI" HorizontalAlignment="Left" Height="40" Margin="160,330,0,0" VerticalAlignment="Top" Width="130" Click="btnEstrai_Click"/>
 
     </Grid>
 </Window>

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Threading;
 
 namespace Es.Programma_Asincrono
 {
@@ -35,6 +36,7 @@ namespace Es.Programma_Asincrono
         ImageSource dado6;
         Random r;
         int i;
+        int f;
 
         public MainWindow()
         {
@@ -54,6 +56,121 @@ namespace Es.Programma_Asincrono
             dado6 = new BitmapImage(uriDado6);
             r = new Random();
             i = 0;
+            f = 0;
+            SorteggioInfinito();
+
+        }
+
+        public async void SorteggioInfinito()
+        {
+            await Task.Run(() =>
+            {
+                while (true)
+                {
+                    Thread.Sleep(500);
+                    i = r.Next(1, 7);
+                    f = r.Next(1, 7);
+
+                    switch (i)
+                    {
+                        case 1:
+                            this.Dispatcher.BeginInvoke(new Action(() =>
+                            {
+                                imgDado1.Source = dado1;
+                            }));
+                            break;
+                        case 2:
+                            this.Dispatcher.BeginInvoke(new Action(() =>
+                            {
+                                imgDado1.Source = dado2;
+                            }));
+                            break;
+                        case 3:
+                            this.Dispatcher.BeginInvoke(new Action(() =>
+                            {
+                                imgDado1.Source = dado3;
+                            }));
+                            break;
+                        case 4:
+                            this.Dispatcher.BeginInvoke(new Action(() =>
+                            {
+                                imgDado1.Source = dado4;
+                            }));
+                            break;
+                        case 5:
+                            this.Dispatcher.BeginInvoke(new Action(() =>
+                            {
+                                imgDado1.Source = dado5;
+                            }));
+                            break;
+                        case 6:
+                            this.Dispatcher.BeginInvoke(new Action(() =>
+                            {
+                                imgDado1.Source = dado6;
+                            }));
+                            break;
+                        default:
+                            this.Dispatcher.BeginInvoke(new Action(() =>
+                            {
+                                imgDado1.Source = dado1;
+                            }));
+                            break;
+                    }
+
+                    switch (f)
+                    {
+                        case 1:
+                            this.Dispatcher.BeginInvoke(new Action(() =>
+                            {
+                                imgDado2.Source = dado1;
+                            }));
+                            break;
+                        case 2:
+                            this.Dispatcher.BeginInvoke(new Action(() =>
+                            {
+                                imgDado2.Source = dado2;
+                            }));
+                            break;
+                        case 3:
+                            this.Dispatcher.BeginInvoke(new Action(() =>
+                            {
+                                imgDado2.Source = dado3;
+                            }));
+                            break;
+                        case 4:
+                            this.Dispatcher.BeginInvoke(new Action(() =>
+                            {
+                                imgDado2.Source = dado4;
+                            }));
+                            break;
+                        case 5:
+                            this.Dispatcher.BeginInvoke(new Action(() =>
+                            {
+                                imgDado2.Source = dado5;
+                            }));
+                            break;
+                        case 6:
+                            this.Dispatcher.BeginInvoke(new Action(() =>
+                            {
+                                imgDado2.Source = dado6;
+                            }));
+                            break;
+                        default:
+                            this.Dispatcher.BeginInvoke(new Action(() =>
+                            {
+                                imgDado2.Source = dado1;
+                            }));
+                            break;
+                    }
+                }
+
+            });
+        }
+
+        private void btnEstrai_Click(object sender, RoutedEventArgs e)
+        {
+
+            MessageBox.Show("Il risultato è: " + (i + f));
 
         }
     }

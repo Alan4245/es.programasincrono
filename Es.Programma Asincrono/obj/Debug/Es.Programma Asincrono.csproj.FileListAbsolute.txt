@@ -1,0 +1,15 @@
+C:\Users\alanm\Documents\GitHubProgetti\Es.Programma Asincrono\Es.Programma Asincrono\bin\Debug\Es.Programma Asincrono.exe.config
+C:\Users\alanm\Documents\GitHubProgetti\Es.Programma Asincrono\Es.Programma Asincrono\bin\Debug\Es.Programma Asincrono.exe
+C:\Users\alanm\Documents\GitHubProgetti\Es.Programma Asincrono\Es.Programma Asincrono\bin\Debug\Es.Programma Asincrono.pdb
+C:\Users\alanm\Documents\GitHubProgetti\Es.Programma Asincrono\Es.Programma Asincrono\obj\Debug\Es.Programma Asincrono.csprojAssemblyReference.cache
+C:\Users\alanm\Documents\GitHubProgetti\Es.Programma Asincrono\Es.Programma Asincrono\obj\Debug\MainWindow.g.cs
+C:\Users\alanm\Documents\GitHubProgetti\Es.Programma Asincrono\Es.Programma Asincrono\obj\Debug\App.g.cs
+C:\Users\alanm\Documents\GitHubProgetti\Es.Programma Asincrono\Es.Programma Asincrono\obj\Debug\Es.Programma Asincrono_MarkupCompile.cache
+C:\Users\alanm\Documents\GitHubProgetti\Es.Programma Asincrono\Es.Programma Asincrono\obj\Debug\Es.Programma Asincrono_MarkupCompile.lref
+C:\Users\alanm\Documents\GitHubProgetti\Es.Programma Asincrono\Es.Programma Asincrono\obj\Debug\MainWindow.baml
+C:\Users\alanm\Documents\GitHubProgetti\Es.Programma Asincrono\Es.Programma Asincrono\obj\Debug\Es.Programma Asincrono.g.resources
+C:\Users\alanm\Documents\GitHubProgetti\Es.Programma Asincrono\Es.Programma Asincrono\obj\Debug\Es.Programma_Asincrono.Properties.Resources.resources
+C:\Users\alanm\Documents\GitHubProgetti\Es.Programma Asincrono\Es.Programma Asincrono\obj\Debug\Es.Programma Asincrono.csproj.GenerateResource.cache
+C:\Users\alanm\Documents\GitHubProgetti\Es.Programma Asincrono\Es.Programma Asincrono\obj\Debug\Es.Programma Asincrono.csproj.CoreCompileInputs.cache
+C:\Users\alanm\Documents\GitHubProgetti\Es.Programma Asincrono\Es.Programma Asincrono\obj\Debug\Es.Programma Asincrono.exe
+C:\Users\alanm\Documents\GitHubProgetti\Es.Programma Asincrono\Es.Programma Asincrono\obj\Debug\Es.Programma Asincrono.pdb
