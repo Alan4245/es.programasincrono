@@ -64,8 +64,12 @@ namespace Es.Programma_Asincrono
             progressoProgressBar = 0;
             pgb1.Minimum = 0;
             pgb1.Maximum = 500;
+            //avvio i metodi asincroni
             SorteggioInfinito();
-            
+            LetturaFile();
+            ProgressBar();
+
+
         }
 
         public async void SorteggioInfinito()
@@ -75,10 +79,10 @@ namespace Es.Programma_Asincrono
                 while (true)
                 {
                     Thread.Sleep(500);
-                    i = r.Next(1, 7);
+                    i = r.Next(1, 7); //genero i valori random per tutti e due i dadi
                     f = r.Next(1, 7);
 
-                    switch (i)
+                    switch (i) //cambio l'immagine del primo dado
                     {
                         case 1:
                             this.Dispatcher.BeginInvoke(new Action(() =>
@@ -124,7 +128,7 @@ namespace Es.Programma_Asincrono
                             break;
                     }
 
-                    switch (f)
+                    switch (f) //cambio l'immagine del secondo dado
                     {
                         case 1:
                             this.Dispatcher.BeginInvoke(new Action(() =>
@@ -183,7 +187,7 @@ namespace Es.Programma_Asincrono
                     string textFile = sr.ReadToEnd();
                     totalCharacters = textFile.Length;
                 }
-
+                //leggo tutto il file e conto il numero di caratteri
             });
         }
 
@@ -193,21 +197,21 @@ namespace Es.Programma_Asincrono
             {
                 int lel = 0;
                 double risStampa = 0;
-                while (progressoProgressBar < 500)
+                while (progressoProgressBar < 500) //finchè non completo la progressbar
                 {
-                    Thread.Sleep(1000);
-                    lel += r.Next(0, 25);
+                    Thread.Sleep(500);
+                    lel += r.Next(0, 25); //genero un progresso random
 
                     this.Dispatcher.BeginInvoke(new Action(() =>
                     {
-                        if (lel < 500)
+                        if (lel < 500) //Verifico che non sfori il range della progressbar
                         {
                             progressoProgressBar = lel;
                             pgb1.Value = lel;
-                            risStampa = (lel * 100) / 500;
-                            lblOutputCaricamento.Content = ("In lettura: " + risStampa);
+                            risStampa = (lel * 100) / 500; //Formula: x:100 = lel:500
+                            lblOutputCaricamento.Content = ("In lettura: " + risStampa + "%");
                         }
-                        else
+                        else //se sfora assegno il massimo
                         {
                             progressoProgressBar = 500;
                             pgb1.Value = 500;
@@ -222,7 +226,7 @@ namespace Es.Programma_Asincrono
         private void btnEstrai_Click(object sender, RoutedEventArgs e)
         {
 
-            MessageBox.Show("Il risultato è: " + (i + f));
+            MessageBox.Show("Il risultato è: " + (i + f)); //Mostro la somma dei numeri attualmente generati
 
         }
     }
