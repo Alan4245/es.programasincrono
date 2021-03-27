@@ -187,7 +187,20 @@ namespace Es.Programma_Asincrono
             });
         }
 
-    private void btnEstrai_Click(object sender, RoutedEventArgs e)
+        public async void ProgressBar()
+        {
+            await Task.Run(() =>
+            {
+
+                while (progressoProgressBar < 500)
+                {
+
+                }
+
+            });
+        }
+
+        private void btnEstrai_Click(object sender, RoutedEventArgs e)
         {
 
             MessageBox.Show("Il risultato è: " + (i + f));
